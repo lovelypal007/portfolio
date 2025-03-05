@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* body{
+    color: rgb(194, 96, 96);
+    background: url(black.avif);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+} */
+.Title {
+    text-align: center;
+    text-decoration: dashed;
+    color: white;
+    text-shadow: 5px 5px 10px lightblue;
+    padding: 20px 30px;
+    font-weight: 200;
+    font-size: 50px;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.container-1 {
+    height: 600px;
+    width: 40%;
+    box-shadow: -10px 2px 20px rgb(179, 120, 120);
+    /* background-color: rgb(69, 69, 69); */
+    border-radius: 2px;
+    border-style: hidden;
+    border-color: wheat;
+    margin-top: 10px;
+    margin: 40px 20px;
+    padding: 10px 10px;
+}
+.container-3{
+    height: 600px;
+    width: 40%;
+    box-shadow:10px 2px 20px rgb(179, 120, 120);
+    /* background-color: rgb(69, 69, 69); */
+    border-radius: 2px;
+    border-style: hidden;
+    border-color: wheat;
+    margin-top: 10px;
+    margin: 40px 20px;
+    padding: 10px 10px;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container-1, .container-3{
+        width: 100%; 
+        margin: 20px 0; 
+    }
+}
+
+.heading {
+    color: white;
+    text-shadow: 5px 5px 10px black;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.teachincal-bars {
+    margin-top: 15px;
+    padding: 20px 30px;
+    color: white;
+}
+
+.bars {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.teachincal-bars .bars .info {
+    margin-bottom: 5px;
+}
+
+.teachincal-bars .bars .info {
+    font-size: 20px;
+    font-weight: 100;
+    animation: showtext 0.5s 1s linear forwards;
+    color: black;
+
+}
+
+.teachincal-bars .bars .proffesional-lines {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(236, 226, 226);
+    animation: slidein 1s cubic-bezier(1, 0, 0.5, 1)forwards;
+    transform-origin: left;
+}
+
+@keyframes slidein {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.teachincal-bars .bars .proffesional-lines span {
+    position: absolute;
+    border-radius: 10px;
+    height: 5px;
+    background: linear-gradient(to right, lightblue, lightcoral);
+    animation: slidein 1s 1s cubic-bezier(1, 0, 0.5, 1)forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.proffesional-lines.html span {
+    width: 90%;
+}
+
+.proffesional-lines.css span {
+    width: 85%;
+}
+
+.proffesional-lines.JavaScript span {
+    width: 70%;
+}
+
+.proffesional-lines.cplus span {
+    width: 80%;
+}
+.proffesional-lines span::after{
+    position:absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right:-20px;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.proffesional-lines.html span::after{
+    content: "90%";
+}
+
+.proffesional-lines.css span::after {
+    content: "85%";
+}
+
+.proffesional-lines.JavaScript span::after {
+    content: "70%";
+}
+
+.proffesional-lines.cplus span::after {
+    content: "80%";
+}
+
+.proffesional-lines span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showtext 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showtext{
+    100%{
+        opacity: 1;
+    }
+}
+
+.raidal-bars{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.raidal-bars .radial-bar{
+    margin-top: 40px;
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position:relative;
+}
+.raidal-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+.raidal-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+
+}
+@keyframes animate-bar 
+{
+    100%{
+        stroke-dashoffset: -1;
+    }
+    
+}
+.path{
+    stroke-width: 10;
+    stroke:rgb(238, 146, 146);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+@keyframes animate-path1 {
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5 1s linear forwards;
+    opacity: 0;
+}
+.progress-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+}

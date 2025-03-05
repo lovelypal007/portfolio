@@ -1,0 +1,177 @@
+/* { 
+    margin: 50px;
+} */
+.projects-title {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: dashed;
+    color: white;
+    text-shadow: 5px 5px 10px lightblue;
+    padding: 20px 30px;
+    font-weight: 200;
+    font-size: 50px;
+    box-sizing: border-box;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    width: 100%;
+    gap: 50px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+.projects .project-item {
+    position: relative;
+    height: 230px;
+    
+}
+
+.myimage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.project-item.stopwatch::before {
+    content: "STOPWATCH";
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .4s;
+    z-index: 1;
+}
+
+.project-item.stopwatch::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    border-radius: 20px;
+    background: linear-gradient(to right, lightblue, lightcoral);
+
+    transition: .4s;
+}
+
+.project-item.stopwatch:hover::after {
+    height: 100%;
+}
+
+.project-item.stopwatch:hover::before {
+    margin-top: 0;
+    opacity: 1;
+} 
+
+.project-item.rock::before {
+    content: "ROCK-PAPER-SCISSOR";
+    text-align: center;
+    text-shadow: 5px 5px 10px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.project-item.rock::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    border-radius: 20px;
+    background: linear-gradient(to right, lightblue, lightcoral);
+    transition: .4s;
+
+}
+
+.project-item.rock:hover::after {
+    height: 100%;
+}
+
+.project-item.rock:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.project-item.tic-tac::before {
+    content: "TIC-TAC-TOE";
+    text-align: center;
+    position: absolute;
+    text-shadow: 5px 5px 10px black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .4s;
+    z-index: 1;
+}
+
+.project-item.tic-tac::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    border-radius: 20px;
+    background: linear-gradient(to right, lightblue, lightcoral);
+    transition: .4s;
+}
+
+.project-item.tic-tac:hover::after {
+    height: 100%;
+}
+
+.project-item.tic-tac:hover::before {
+    margin-top: 0;
+    opacity: 1;
+}
+
+
+
+.btn1{    
+    height: 70px;
+  width: 100%;
+  color: white;
+  font-size: larger;
+  background: linear-gradient(to left, black, gray);
+  text-shadow: 5px 5px 10px lightblue;
+  text-align: center;
+    border-radius: 5px;
+    box-shadow: -10px 2px 20px rgb(179, 120, 120);
+    cursor: pointer;
+  }
+
+.btn1:hover {
+    background-color: #45a049;
+  }
